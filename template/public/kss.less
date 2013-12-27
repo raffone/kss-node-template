@@ -3,22 +3,35 @@
 
 body {
   margin: 0;
+  /*background-color: #092b37 !important*/
 }
 
 // Import rainbow.js highlighter.
-@import "rainbow-github";
+@import "rainbow-themes/solarized-light";
+
+.kss-markup .close {
+  float: none !important
+}
 
 #kss-node {
 
   border-top: 4px solid @key-color;
   background: #fff;
 
+
   // Variables
+  /*@text-color: #eef3f3;*/
+  /*@key-color: #bad530;*/
+  /*@border-color: #344f59;*/
+  /*@wrapper-width: 960px;*/
+  /*@sidebar-width: 220px;*/
+
   @text-color: #222;
-  @key-color: #972;
-  @border-color: #e3e3e3;
+  @key-color: #a2be14;
+  @border-color: #E2E2E2;
   @wrapper-width: 960px;
   @sidebar-width: 220px;
+  @sidebar-color: #888;
 
   // Mixins
   .base-styles() {
@@ -87,7 +100,7 @@ body {
       .pre-styles();
       overflow: auto;
       padding: 8px 12px;
-      border: 1px solid @border-color;
+      /*border: 1px solid @border-color;*/
     }
     a,
     img,
@@ -121,7 +134,7 @@ body {
     code {
       .code-styles();
       padding: 1px 2px;
-      border: 1px solid @border-color;
+      /*border: 1px solid @border-color;*/
       vertical-align: 1px;
     }
     pre > code {
@@ -137,7 +150,7 @@ body {
     line-height: 1.5;
     font-size: 13px;
     font-family: Consolas, Menlo,'Liberation Mono', Courier, monospace;
-    color: @text-color
+    /*color: @text-color*/
   }
   .clearfix() {
     &:before,
@@ -217,7 +230,7 @@ body {
         border-bottom: 1px solid @border-color;
         text-decoration: none;
         font-weight: bold;
-        color: #888;
+        color: @sidebar-color;
         &:hover {
           color: @key-color;
         }
@@ -233,6 +246,7 @@ body {
       }
       &.kss-active > a {
         border-bottom-color: @key-color;
+        border-bottom-width: 2px;
         color: @text-color;
       }
     }
@@ -251,7 +265,7 @@ body {
         display: block;
         padding: 5px 0 6px 5px;
         text-decoration: none;
-        color: #888;
+        color: @sidebar-color;
         &:hover {
           color: @key-color;
         }
@@ -362,10 +376,10 @@ body {
       overflow: auto;
       margin: 0;
       padding: 12px 15px;
-      border-top: 1px solid @border-color;
-      border-left: 2px solid @key-color;
-      border-right: 1px solid @border-color;
-      border-bottom: 1px solid @border-color;
+      /*border-top: 1px solid @border-color;*/
+      /*border-left: 2px solid @key-color;*/
+      /*border-right: 1px solid @border-color;*/
+      /*border-bottom: 1px solid @border-color;*/
     }
     code {
       .code-styles();
