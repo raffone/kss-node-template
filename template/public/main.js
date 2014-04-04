@@ -75,13 +75,13 @@
         // Append child menu and attach scrollSpy
         if ($childMenu.length) {
             $childMenu.show().appendTo($menuItem.eq(ref));
-            $window.on('scroll', scrollSpy).trigger('scroll');
+            //$window.on('scroll', scrollSpy).trigger('scroll');
         }
 
         // Fixed sidebar
-        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-            $window.on('resize', fixSidebar).trigger('resize');
-        }
+        //if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            //$window.on('resize', fixSidebar).trigger('resize');
+        //}
 
         // Syntax hightlignting with Rainbow.js
         $('code.html').attr('data-language', 'html');
